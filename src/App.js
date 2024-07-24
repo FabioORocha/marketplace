@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import Navbar from './components/Navbar';
+import Header from './components/Header';
+import Banner from './components/Banner';
+import ProductCarousel from './components/ProductCarousel';
+import Categories from './components/Categories';
+import Footer from './components/Footer';
+import Cart from './components/Cart';
+import ProductDetails from './components/ProductDetails';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import './styles.css';
+const App = () => {
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
-function App() {
+  const handleOpenCart = () => {
+    setIsCartOpen(true);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <Navbar />
+        <Header onCartClick={() => setIsCartOpen(true)}/>
+          <Routes>
+            <Route path="/" element={
+              <div className="home">
+                <Banner />
+                <ProductCarousel title="Lançamentos" uniqueId="launches" onOpenCart={handleOpenCart} />
+                <ProductCarousel title="Os mais vendidos" uniqueId="best-sellers" onOpenCart={handleOpenCart} />
+                <Categories />
+                <ProductCarousel title="Ofertas imperdiveis" uniqueId="best-deals" onOpenCart={handleOpenCart} />
+              </div>
+            } />
+            <Route path="/produto/:id" element={<ProductDetails onOpenCart={handleOpenCart} />} />
+          </Routes>
+        <Footer />
+        <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+      </Router>
+    </Provider>
   );
-}
+};
 
 export default App;

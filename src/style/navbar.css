@@ -1,0 +1,17 @@
+.navbar {
+  background: var(--azul-universe-darkest) 0% 0% no-repeat padding-box;
+  border: 1px solid #54507367;
+
+  b{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-21) var(--unnamed-font-family-urbanist);
+    letter-spacing: var(--unnamed-character-spacing-0-7);
+    color: var(--rosa-2b-dark);
+  }
+
+  p{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-21) var(--unnamed-font-family-urbanist);
+    letter-spacing: var(--unnamed-character-spacing-0-7);
+    color: var(--rosa-2b-medium);
+    text-align: center;
+  }
+}

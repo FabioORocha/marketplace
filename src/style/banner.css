@@ -1,0 +1,50 @@
+.banner {
+  position: relative;
+  text-align: center;
+}
+
+.banner .slick-slider .slick-dots {
+  bottom: 22px !important;
+}
+
+.banner .slick-slider .slick-dots li {
+  margin: 0!important;
+  width: 8px !important;
+  height: 8px !important;
+  padding: 8px;
+}
+
+.banner .slick-slider .slick-dots li button {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+.banner .slick-slider .slick-dots li button::before {
+  color: var(--azul-universe-light);
+  width: 8px !important;
+  height: 8px !important;
+  opacity: 1 !important;
+}
+
+.banner .slick-slider .slick-dots .slick-active button::before {
+  color: var(--rosa-2b-dark);
+  width: 8px !important;
+  height: 8px !important;
+  opacity: 1 !important;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 480px) {
+  .banner img {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+}

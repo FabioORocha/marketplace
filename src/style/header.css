@@ -1,0 +1,86 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(--azul-universe-darkest) 0% 0% no-repeat padding-box;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  a .logo{
+    @media (max-width: 480px) {
+      width: 60px;
+    }
+    @media (max-width: 768px) {
+      width: 90px;
+    }
+  }
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+
+  a:link, li {
+    text-decoration: none;
+    cursor: pointer;
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-12)/var(--unnamed-line-spacing-14) var(--unnamed-font-family-urbanist);
+    letter-spacing: var(--unnamed-character-spacing-1-08);
+    color: var(--rosa-2b-medium);
+    text-align: center;
+    text-transform: uppercase;
+
+    @media(max-width: 480px){
+      font-size: var(--unnamed-font-size-10);
+    }
+    
+  }
+}
+
+.cart-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  min-width: 140px;
+  cursor: pointer;
+
+  @media (max-width: 480px) {
+    min-width: 60px;
+  }
+  @media (max-width: 768px) {
+    width: 90px;
+  }
+}
+
+.cart-icon img{
+  width: 19px;
+  height: 24px;
+
+  @media (max-width: 480px) {
+    width: 12px;
+    height: 16px;
+  }
+}
+
+.cart-count{
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: var(--rosa-2b-dark) 0% 0% no-repeat padding-box;
+  
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) var(--unnamed-font-size-10)/var(--unnamed-line-spacing-12) Rubik;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--neutral-lightest);
+  text-align: center;
+
+  @media (max-width: 480px) {
+    font-size: var(--unnamed-font-size-10);
+    width: 14px;
+    height: 14px;
+  }
+}
