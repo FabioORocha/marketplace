@@ -9,7 +9,7 @@
   margin-top: 80px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 414px) {
   .footer {
     flex-direction: column;
     text-align: center; 
@@ -48,7 +48,7 @@
 .footer .left .text {
   margin-bottom: 0;
 
-  @media (max-width: 480px) {
+  @media (max-width: 414px) {
     text-align: center;
   }
 }

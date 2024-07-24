@@ -9,7 +9,7 @@
     background-color: var(--rosa-2b-lightest);
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 414px) {
     background-color: var(--rosa-2b-lightest);
     border-radius: 24px;
   }
@@ -90,7 +90,7 @@
   opacity: 0;
   transition: opacity 0.3s ease-in;
 
-  @media(max-width: 480px){
+  @media(max-width: 414px){
     opacity: 1;
   }
   @media(max-width: 768px){
@@ -213,7 +213,7 @@
     background: var(--rosa-2b-darkest) 0% 0% no-repeat padding-box;
   }
 
-  @media(max-width: 480px){
+  @media(max-width: 414px){
     opacity: 1;
   }
   @media(max-width: 768px){

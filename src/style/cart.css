@@ -9,7 +9,7 @@
   transition: right 0.3s;
   z-index: 1000;
 
-  @media(max-width: 480px){
+  @media(max-width: 414px){
     width: 100%;
   }
 }

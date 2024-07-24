@@ -4,7 +4,7 @@
   padding-right: 5%;
   margin-top: 50px;
 
-  @media (max-width: 480px) {
+  @media (max-width: 414px) {
     margin-bottom: 24px;
   }
 }
@@ -19,7 +19,7 @@
 }
 
 .product-carousel .carousel .slick-slider{
-  @media (max-width: 480px) {
+  @media (max-width: 414px) {
     .slick-dots{
       bottom: -50px;
     }
@@ -39,7 +39,7 @@
     background-color: var(--rosa-2b-lightest);
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 414px) {
     background-color: transparent;
   }
 
@@ -67,7 +67,7 @@
     transform: rotate(180deg);
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 414px) {
     .slick-prev, .slick-next{
       display: none !important;
     } 

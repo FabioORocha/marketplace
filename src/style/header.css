@@ -8,7 +8,7 @@
   padding-right: 5%;
 
   a .logo{
-    @media (max-width: 480px) {
+    @media (max-width: 414px) {
       width: 60px;
     }
     @media (max-width: 768px) {
@@ -31,7 +31,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    @media(max-width: 480px){
+    @media(max-width: 414px){
       font-size: var(--unnamed-font-size-10);
     }
     
@@ -46,7 +46,7 @@
   min-width: 140px;
   cursor: pointer;
 
-  @media (max-width: 480px) {
+  @media (max-width: 414px) {
     min-width: 60px;
   }
   @media (max-width: 768px) {
@@ -58,7 +58,7 @@
   width: 19px;
   height: 24px;
 
-  @media (max-width: 480px) {
+  @media (max-width: 414px) {
     width: 12px;
     height: 16px;
   }
@@ -78,7 +78,7 @@
   color: var(--neutral-lightest);
   text-align: center;
 
-  @media (max-width: 480px) {
+  @media (max-width: 414px) {
     font-size: var(--unnamed-font-size-10);
     width: 14px;
     height: 14px;

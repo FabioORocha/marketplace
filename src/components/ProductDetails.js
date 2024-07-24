@@ -23,15 +23,17 @@ const ProductDetails = ({ onOpenCart }) => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const product = useSelector((state) => state.products.find((p) => p.id === id));
+  
 
-  // Renomear o estado e a função relacionados ao tamanho
   const [selectedProductSizeDetail, setSelectedProductSizeDetail] = useState(product?.tamanho[0] || '');
   if (!product) return <p>Produto não encontrado</p>;
 
-  // Renomear a função de adicionar ao carrinho
   const handleAddToCartDetailClick = (e) => {
     if (e) e.stopPropagation();
     dispatch(addItem({ ...product, quantity: 1, selectedSize: selectedProductSizeDetail }));
+    if (onOpenCart) {
+      onOpenCart();
+    }
   };
 
   return (
@@ -76,7 +78,7 @@ const ProductDetails = ({ onOpenCart }) => {
                   <input
                     type="radio"
                     id={`main-size-${size}`}
-                    name={`size-${product.id}`} // Nome único por produto
+                    name={`size-${product.id}`}
                     value={size}
                     checked={selectedProductSizeDetail === size}
                     onChange={() => setSelectedProductSizeDetail(size)}
@@ -93,7 +95,7 @@ const ProductDetails = ({ onOpenCart }) => {
         </div>
       </div>
       <div className="description-section">
-        <h2 description-title>Descrição</h2>
+        <h2 className='description-title'>Descrição</h2>
         <p className='description'>{product.descrição}</p>
       </div>
       <ProductCarousel title="Os mais vendidos" uniqueId="sales" onOpenCart={onOpenCart} />
