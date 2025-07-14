@@ -33,6 +33,7 @@ A aplicação inclui:
 
 ## 🖼️ Preview
 
+
 🏠 Homepage
 
 <img src="https://drive.google.com/uc?export=view&id=1ot-YUAhY3WmcP8hYcdeLRVN3ict658NJ" alt="Homepage Marketplace" width="700" />
